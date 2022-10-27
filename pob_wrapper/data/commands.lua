@@ -55,6 +55,12 @@ function commands.loadBuild(path)
     return result
 end
 
+function commands.loadBuildCode(code)
+    pobinterface.loadBuildCode(code)
+    result = getBuildInfo()
+    return result
+end
+
 function commands.saveBuild()
     if not build.dbFileName then
         error("Attempting to save a build with no filename")

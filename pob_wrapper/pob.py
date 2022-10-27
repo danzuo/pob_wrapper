@@ -121,6 +121,10 @@ class PathOfBuilding:
         path = safe_string(path)
         self._send(f'loadBuild("{path}")', ignore_result=True)
 
+    def load_build_code(self, code: str):
+        code = safe_string(code)
+        self._send(f'loadBuildCode("{code}")', ignore_result=True)
+
     def update_build(self):
         self._send(f'updateBuild()', ignore_result=True)
 

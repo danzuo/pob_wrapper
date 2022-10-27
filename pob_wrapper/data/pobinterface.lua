@@ -29,6 +29,11 @@ function pobinterface.loadBuild(path)
 end
 
 
+function pobinterface.loadBuildCode(code)
+    loadBuildFromXML(code)
+    build.buildName = 'Manual generated build'
+end    
+
 function pobinterface.saveBuild()
     if not build.dbFileName then
         error("Unable to save - no build path set")
